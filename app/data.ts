@@ -124,12 +124,12 @@ export const liveBroadcasts: Broadcast[] = [
 ];
 
 // 홈쇼핑 (앞 10개)
-// category(분류) = 상품 카테고리(cat.cat_name)
+// category(분류) = 방송사(platform_name) — 페이지 "분류" 칸 기준
 export const homeBroadcasts: Broadcast[] = [
   {
     id: "faa9d027a35b7800ab39ff333ce699ce",
     title: "햇 가족 의성眞 황도복숭아(말랑이) 4kg",
-    category: "식품",
+    category: "공영쇼핑",
     datetime: "26.07.19 22:00",
     views: null,
     salesCount: null,
@@ -139,7 +139,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "79f96909fa85b0d4525a1d2884fbc5e4",
     title: "한일이동식에어컨",
-    category: "디지털/가전",
+    category: "NS홈쇼핑",
     datetime: "26.07.19 21:40",
     views: null,
     salesCount: null,
@@ -149,7 +149,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "9f025a9b6499a1bb307db2649d76d438",
     title: "[메가스터디교육] 엠베스트 중등학습 상담예약",
-    category: "여가/생활편의",
+    category: "현대홈쇼핑",
     datetime: "26.07.19 22:45",
     views: null,
     salesCount: null,
@@ -159,7 +159,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "85ac924d12b526f89bb8af66093e0975",
     title: "[구독] 세라젬 마스터 시리즈",
-    category: "여가/생활편의",
+    category: "현대홈쇼핑 플러스샵",
     datetime: "26.07.19 22:40",
     views: null,
     salesCount: null,
@@ -169,7 +169,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "0c1cd818de3cd1463d756b4aba612851",
     title: "(방송에서만) 스위스알파인클럽 프라임 트윈 에어베드 싱글+싱글",
-    category: "스포츠/레저",
+    category: "신세계쇼핑",
     datetime: "26.07.19 22:26",
     views: null,
     salesCount: null,
@@ -179,7 +179,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "e25924cb9a792a1f0a63b7160e9b30cc",
     title: "이지듀 최신상 쿨링핏 기미쿠션 멜라 비 토닝 앰플 메쉬쿠션 리필 18g",
-    category: "화장품/미용",
+    category: "GS홈쇼핑",
     datetime: "26.07.19 22:40",
     views: null,
     salesCount: null,
@@ -190,7 +190,7 @@ export const homeBroadcasts: Broadcast[] = [
     id: "d2de555108742e0390e3e11df24423ba",
     title:
       "[슈라멕] ★단한번★☆한창서패키지☆ 독일 직수입 슈라멕 블레미쉬밤 클래식 30ml 4통+♡리뷰시♡ 본품 1통 더+체험분 2매+브러쉬+파우치",
-    category: "화장품/미용",
+    category: "롯데홈쇼핑",
     datetime: "26.07.19 22:35",
     views: null,
     salesCount: null,
@@ -200,7 +200,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "4e4b8fa8fba8fe8317a378c5efe3438e",
     title: "모이스춰라이징 앰플 400병패키지 프랑스 공식수입원 정품",
-    category: "화장품/미용",
+    category: "CJ온스타일",
     datetime: "26.07.19 22:40",
     views: null,
     salesCount: null,
@@ -210,7 +210,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "d8028c0170290e7d103ac7bcb602910e",
     title: "블라우풍트_오픈핏이어폰",
-    category: "디지털/가전",
+    category: "KT알파쇼핑",
     datetime: "26.07.19 22:39",
     views: null,
     salesCount: null,
@@ -220,7 +220,7 @@ export const homeBroadcasts: Broadcast[] = [
   {
     id: "66b6f84873b3e43b04e0a61fdf924336",
     title: "푸마드로즈1",
-    category: "패션의류",
+    category: "NS홈쇼핑 샵플러스",
     datetime: "26.07.19 22:42",
     views: null,
     salesCount: null,
