@@ -21,28 +21,36 @@ export default function BroadcastTable({
   return (
     <table className="w-full border-collapse text-sm">
       <thead>
-        <tr className="border-b text-left text-zinc-500">
+        <tr className="border-b text-left text-zinc-500 whitespace-nowrap">
           <th className="p-2">순번</th>
           <th className="p-2">방송정보</th>
           <th className="p-2">분류</th>
           <th className="p-2">방송시간</th>
-          <th className="p-2">{viewsHeader}</th>
-          <th className="p-2">판매량</th>
-          <th className="p-2">매출액</th>
-          <th className="p-2">상품수</th>
+          <th className="p-2 text-right">{viewsHeader}</th>
+          <th className="p-2 text-right">판매량</th>
+          <th className="p-2 text-right">매출액</th>
+          <th className="p-2 text-right">상품수</th>
         </tr>
       </thead>
       <tbody>
         {broadcasts.map((b, index) => (
           <tr key={b.id} className="border-b">
-            <td className="p-2">{index + 1}</td>
+            <td className="p-2 whitespace-nowrap">{index + 1}</td>
             <td className="p-2">{b.title}</td>
-            <td className="p-2">{b.category}</td>
-            <td className="p-2">{b.datetime}</td>
-            <td className="p-2">{formatValue(b.views)}</td>
-            <td className="p-2">{formatValue(b.salesCount)}</td>
-            <td className="p-2">{formatValue(b.salesAmount)}</td>
-            <td className="p-2">{b.productCount.toLocaleString()}</td>
+            <td className="p-2 whitespace-nowrap">{b.category}</td>
+            <td className="p-2 whitespace-nowrap">{b.datetime}</td>
+            <td className="p-2 whitespace-nowrap text-right">
+              {formatValue(b.views)}
+            </td>
+            <td className="p-2 whitespace-nowrap text-right">
+              {formatValue(b.salesCount)}
+            </td>
+            <td className="p-2 whitespace-nowrap text-right">
+              {formatValue(b.salesAmount)}
+            </td>
+            <td className="p-2 whitespace-nowrap text-right">
+              {b.productCount.toLocaleString()}
+            </td>
           </tr>
         ))}
       </tbody>
