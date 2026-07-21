@@ -31,7 +31,12 @@ async function fetchList(type) {
   const match = html.match(/id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/);
   if (!match) throw new Error("__NEXT_DATA__ 스크립트를 찾지 못했습니다.");
   const json = JSON.parse(match[1]);
-  return json.props?.pageProps?.list ?? [];
+  const list = json.props?.pageProps?.list;
+  // 구조가 바뀌면 빈 데이터를 정상처럼 저장하지 않도록, 비었으면 실패시킨다.
+  if (!Array.isArray(list) || list.length === 0) {
+    throw new Error(`'${type}' 방송 목록이 비어있습니다 (페이지 구조 변경 의심).`);
+  }
+  return list;
 }
 
 // 방송시간 문자열 → "YY.MM.DD HH:MM"
