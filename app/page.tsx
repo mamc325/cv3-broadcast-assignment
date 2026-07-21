@@ -8,8 +8,10 @@ export default function Home() {
   // 현재 선택된 유형 (기본: 라이브 방송)
   const [type, setType] = useState<BroadcastType>("live");
 
-  // 유형에 따라 보여줄 데이터 선택
-  const broadcasts = type === "live" ? liveBroadcasts : homeBroadcasts;
+  // 유형에 따라 보여줄 데이터 선택 (최대 10개)
+  const broadcasts = (
+    type === "live" ? liveBroadcasts : homeBroadcasts
+  ).slice(0, 10);
 
   return (
     <main className="mx-auto max-w-5xl p-8">
