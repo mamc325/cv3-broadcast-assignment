@@ -6,17 +6,69 @@
 
 ## 실행 방법
 
-Node.js가 설치돼 있어야 합니다. (권장: Node 20 이상)
+### 0. 사전 준비 — Node.js 설치
+
+Node.js가 필요합니다. (권장: **Node 20 이상**)
+
+설치 여부는 터미널에서 아래로 확인할 수 있습니다.
 
 ```bash
-# 1. 의존성 설치
-npm install
+node -v   # 예: v20.11.0  (v20 이상이면 OK)
+npm -v    # 예: 10.2.4
+```
 
-# 2. 개발 서버 실행
+`command not found`가 뜨면 설치돼 있지 않은 것입니다.
+[https://nodejs.org](https://nodejs.org) 에서 **LTS 버전**을 내려받아 설치하세요.
+(Node를 설치하면 `npm`도 함께 설치됩니다.)
+
+### 1. 프로젝트 내려받기
+
+**방법 A — git으로 클론 (권장)**
+
+```bash
+git clone https://github.com/mamc325/cv3-broadcast-assignment.git
+```
+
+**방법 B — ZIP 다운로드**
+
+GitHub 저장소 페이지에서 초록색 **`Code` → `Download ZIP`** 을 눌러 받은 뒤,
+압축을 풉니다.
+
+### 2. 프로젝트 폴더로 이동
+
+```bash
+cd cv3-broadcast-assignment
+```
+
+### 3. 의존성 설치
+
+프로젝트가 사용하는 라이브러리(next, react 등)를 설치합니다.
+(인터넷 연결 필요, 처음 한 번만)
+
+```bash
+npm install
+```
+
+### 4. 개발 서버 실행
+
+```bash
 npm run dev
 ```
 
-실행 후 브라우저에서 [http://localhost:3000](http://localhost:3000) 접속.
+### 5. 브라우저에서 접속
+
+실행 후 아래 주소를 브라우저에서 엽니다.
+
+👉 [http://localhost:3000](http://localhost:3000)
+
+> 서버를 끄려면 터미널에서 `Ctrl + C`.
+
+### (선택) 프로덕션 모드로 실행
+
+```bash
+npm run build   # 최적화된 빌드 생성
+npm run start   # 빌드된 결과 실행 (역시 http://localhost:3000)
+```
 
 ## 기능
 
